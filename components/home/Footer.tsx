@@ -8,14 +8,10 @@ import {
   Phone,
   Mail,
   Clock,
-  Facebook,
-  Twitter,
-  Youtube,
-  Instagram,
-  Linkedin,
   ExternalLink,
   ChevronRight,
 } from "lucide-react";
+import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon, LinkedinIcon } from "../icons/SocialIcons";
 
 const quickLinks = [
   { name: "About Us", href: "/about/group" },
@@ -28,7 +24,6 @@ const quickLinks = [
 
 const importantLinks = [
   { name: "Student Portal", href: "/student/portal" },
-  { name: "Faculty Login", href: "/faculty/login" },
   { name: "Online Fee Payment", href: "/fees/payment" },
   { name: "Examination Results", href: "/academic/results" },
   { name: "Academic Calendar", href: "/academic/calendar" },
@@ -38,25 +33,22 @@ const importantLinks = [
 const resourceLinks = [
   { name: "CHSE, Odisha", href: "https://chseodisha.nic.in" },
   { name: "UGC", href: "https://www.ugc.ac.in" },
-  { name: "Berhampur University", href: "https://www.buodisha.edu.in" },
+  { name: "Utkal University", href: "https://utkaluniversity.ac.in/" },
   { name: "Govt. of Odisha", href: "https://odisha.gov.in" },
   { name: "e-Pathshala", href: "https://epathshala.nic.in" },
   { name: "NAAC", href: "https://www.naac.gov.in" },
 ];
 
 const policies = [
-  { name: "Privacy Policy", href: "/policies/privacy" },
   { name: "Terms & Conditions", href: "/policies/terms" },
-  { name: "Refund Policy", href: "/policies/refund" },
   { name: "Anti-Ragging Policy", href: "/policies/anti-ragging" },
 ];
 
 const socialLinks = [
-  { name: "Facebook", href: "https://facebook.com", icon: Facebook, hoverBg: "hover:bg-[#1877F2]" },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter, hoverBg: "hover:bg-[#1DA1F2]" },
-  { name: "YouTube", href: "https://youtube.com", icon: Youtube, hoverBg: "hover:bg-[#FF0000]" },
-  { name: "Instagram", href: "https://instagram.com", icon: Instagram, hoverBg: "hover:bg-[#E4405F]" },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin, hoverBg: "hover:bg-[#0A66C2]" },
+  { name: "Facebook", href: "https://facebook.com/divinegroupofinstitutions", icon: FacebookIcon, hoverBg: "hover:bg-[#1877F2]" },
+  { name: "Twitter", href: "https://twitter.com/divineinstitute", icon: TwitterIcon, hoverBg: "hover:bg-[#1DA1F2]" },
+  { name: "YouTube", href: "https://youtube.com/@divinegroupofinstitutions", icon: YoutubeIcon, hoverBg: "hover:bg-[#FF0000]" },
+  { name: "Instagram", href: "https://instagram.com/divinegroupofinstitutions", icon: InstagramIcon, hoverBg: "hover:bg-[#E4405F]" },
 ];
 
 const Footer: React.FC = () => {
@@ -189,18 +181,21 @@ const Footer: React.FC = () => {
                 Follow Us
               </h5>
               <div className="flex gap-2.5">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-9 h-9 bg-[#1a2a42] ${social.hoverBg} rounded flex items-center justify-center transition-colors`}
-                    aria-label={social.name}
-                  >
-                    <social.icon className="w-4 h-4" />
-                  </a>
-                ))}
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center justify-center transition-colors`}
+                      aria-label={social.name}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

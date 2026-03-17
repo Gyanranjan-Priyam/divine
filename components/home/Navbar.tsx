@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, Phone, Mail, Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
+import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon, LinkedinIcon } from "../icons/SocialIcons";
 
 interface SubMenu {
   name: string;
@@ -16,6 +17,12 @@ interface NavItem {
   href?: string;
   submenu?: SubMenu[];
 }
+
+const socialLinks = [
+  { name: "Facebook", href: "https://facebook.com/divinegroupofinstitutions", icon: FacebookIcon },
+  { name: "YouTube", href: "https://youtube.com/@divinegroupofinstitutions", icon: YoutubeIcon },
+  { name: "Instagram", href: "https://instagram.com/divinegroupofinstitutions", icon: InstagramIcon },
+];
 
 const navItems: NavItem[] = [
   { name: "Home", href: "/" },
@@ -29,9 +36,15 @@ const navItems: NavItem[] = [
     ],
   },
   {
+    name: "Institutions",
+    submenu: [
+      { name: "Divine Higher Secondary School", href: "/dhss" },
+      { name: "Divine Degree College", href: "/ddc" },
+    ],
+  },
+  {
     name: "Academics",
     submenu: [
-      { name: "Institutions", href: "/institutions" },
       { name: "Courses Offered", href: "/academic/courses" },
       { name: "Curriculum", href: "/academic/curriculum" },
       { name: "Examination", href: "/academic/examination" },
@@ -86,7 +99,25 @@ const Navbar: React.FC = () => {
               info@divineinstitutions.edu.in
             </span>
           </div>
-          <div className="flex items-center ml-auto sm:ml-0">
+          <div className="flex items-center gap-4 ml-auto sm:ml-0">
+            {/* Social Links */}
+            <div className="hidden md:flex items-center gap-2">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#D4A853] transition-colors"
+                    aria-label={social.name}
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                );
+              })}
+            </div>
             <Button>
             <Link
               href="/pay-online"
