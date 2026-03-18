@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/home/Navbar";
-import Footer from "@/components/home/Footer";
 import ServiceWorkerRegistration from "@/components/PWAInstaller";
 
 const geistSans = Geist({
@@ -180,19 +178,24 @@ export default function MainRootLayout({
               foundingDate: "2013",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Lenkudipada",
+                streetAddress: "Maa Bhuyani Road, Gotisahi",
                 addressLocality: "Nayagarh",
                 addressRegion: "Odisha",
-                postalCode: "752069",
+                postalCode: "752070",
                 addressCountry: "IN",
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+91-XXXXXXXXXX",
+                telephone: "+91-9090172721",
                 contactType: "admissions",
+                email: "divine.ngrh@gmail.com",
                 availableLanguage: ["English", "Hindi", "Odia"],
               },
-              sameAs: [],
+              sameAs: [
+                "https://facebook.com/divine.ngrh",
+                "https://instagram.com/divine.ngrh",
+                "https://youtube.com/@divinenayagarh",
+              ],
               member: [
                 {
                   "@type": "EducationalOrganization",
@@ -215,9 +218,7 @@ export default function MainRootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ServiceWorkerRegistration />
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );

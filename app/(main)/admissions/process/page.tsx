@@ -362,17 +362,19 @@ const AdmissionProcessPage = () => {
                 <h3 className="font-bold text-lg mb-3 text-[#D4A853]">
                   Divine Higher Secondary School
                 </h3>
-                <p className="text-sm mb-2">📞 Contact: +91 1234 567 890</p>
+                <p className="text-sm mb-2">📞 Contact: +91-9090172721</p>
+                <p className="text-sm mb-2">📞 Contact: +91-9668676867</p>
                 <p className="text-sm">
-                  ✉️ Email: dhss@divinengrh.com
+                  ✉️ Email: divine.ngrh@gmail.com
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="font-bold text-lg mb-3 text-[#D4A853]">
                   Divine Degree College
                 </h3>
-                <p className="text-sm mb-2">📞 Contact: +91 7978421452</p>
-                <p className="text-sm">✉️ Email: ddcnrgrh@gmail.com</p>
+                <p className="text-sm mb-2">📞 Contact: +91-9090172721</p>
+                <p className="text-sm mb-2">📞 Contact: +91-9668676867</p>
+                <p className="text-sm">✉️ Email: divine.ngrh@gmail.com</p>
               </div>
             </div>
             <div className="text-center mt-6">

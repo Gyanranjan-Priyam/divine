@@ -45,10 +45,9 @@ const policies = [
 ];
 
 const socialLinks = [
-  { name: "Facebook", href: "https://facebook.com/divinegroupofinstitutions", icon: FacebookIcon, hoverBg: "hover:bg-[#1877F2]" },
-  { name: "Twitter", href: "https://twitter.com/divineinstitute", icon: TwitterIcon, hoverBg: "hover:bg-[#1DA1F2]" },
-  { name: "YouTube", href: "https://youtube.com/@divinegroupofinstitutions", icon: YoutubeIcon, hoverBg: "hover:bg-[#FF0000]" },
-  { name: "Instagram", href: "https://instagram.com/divinegroupofinstitutions", icon: InstagramIcon, hoverBg: "hover:bg-[#E4405F]" },
+  { name: "Facebook", href: "https://facebook.com/divine.ngrh", icon: FacebookIcon, hoverBg: "hover:bg-[#1877F2]" },
+  { name: "Instagram", href: "https://instagram.com/divine.ngrh", icon: InstagramIcon, hoverBg: "hover:bg-[#E4405F]" },
+  { name: "YouTube", href: "https://youtube.com/@divinenayagarh", icon: YoutubeIcon, hoverBg: "hover:bg-[#FF0000]" },
 ];
 
 const Footer: React.FC = () => {
@@ -81,27 +80,32 @@ const Footer: React.FC = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#D4A853] mt-0.5 shrink-0" />
-                <p>Nayagarh, Odisha - 752069, India</p>
+                <div>
+                  <p className="font-medium text-white text-xs mb-1">City Office:</p>
+                  <p className="mb-2">College Road, Nayagarh - 752070</p>
+                  <p className="font-medium text-white text-xs mb-1">Main Campus:</p>
+                  <p>Maa Bhuyani Road, Gotisahi, Nayagarh - 752070</p>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#D4A853] shrink-0" />
                 <div>
-                  <a href="tel:+911234567890" className="hover:text-white transition-colors">
-                    +91 1234 567 890
+                  <a href="tel:+919090172721" className="hover:text-white transition-colors">
+                    +91-9090172721
                   </a>
                   <span className="text-gray-600 mx-1.5">|</span>
-                  <a href="tel:+911234567891" className="hover:text-white transition-colors">
-                    +91 1234 567 891
+                  <a href="tel:+919668676867" className="hover:text-white transition-colors">
+                    +91-9668676867
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#D4A853] shrink-0" />
                 <a
-                  href="mailto:info@divinengrh.com"
+                  href="mailto:divine.ngrh@gmail.com"
                   className="hover:text-white transition-colors break-all"
                 >
-                  info@divinengrh.com
+                  divine.ngrh@gmail.com
                 </a>
               </div>
               <div className="flex items-start gap-3">

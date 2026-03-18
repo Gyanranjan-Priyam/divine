@@ -197,9 +197,10 @@ const TermsPage = () => {
       content: [
         "For any queries, clarifications, or concerns regarding these Terms and Conditions, please contact:",
         "Divine Group of Institutions",
-        "Nayagarh, Odisha",
-        "Email: info@divinengrh.com",
-        "Phone: [Contact Number]"
+        "Main Campus: Maa Bhuyani Road, Gotisahi, Nayagarh - 752070, Odisha",
+        "City Office: College Road, Nayagarh - 752070, Odisha",
+        "Email: divine.ngrh@gmail.com",
+        "Phone: +91-9090172721, +91-9668676867"
       ]
     }
   ];

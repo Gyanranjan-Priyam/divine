@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, Phone, Mail, Menu, X } from "lucide-react";
-import { Button } from "../ui/button";
-import { FacebookIcon,  YoutubeIcon, InstagramIcon, } from "../icons/SocialIcons";
+import { Button } from "@/components/ui/button";
+import { FacebookIcon,  YoutubeIcon, InstagramIcon, } from "@/components/icons/SocialIcons";
 
 interface SubMenu {
   name: string;
@@ -72,7 +72,7 @@ const navItems: NavItem[] = [
   { name: "Contact", href: "/contact" },
 ];
 
-const Navbar: React.FC = () => {
+const NavbarDHSS: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -183,13 +183,13 @@ const Navbar: React.FC = () => {
               />
               <div className="text-center">
                 <h1 className="font-bold text-[#003366] tracking-tight leading-tight text-2xl sm:text-3xl lg:text-5xl">
-                  DIVINE GROUP OF INSTITUTIONS
+                  DIVINE HIGHER SECONDARY SCHOOL
                 </h1>
                 <p className="text-[#003366] font-medium mt-1 sm:mt-2 text-base sm:text-lg lg:text-xl">
-                  (Under the aegis of Divine Educational Trust)
+                  (AFFILIATED INSTITUTE OF CHSE, ODISHA)
                 </p>
                 <p className="text-gray-600 mt-1 text-sm sm:text-base">
-                  Nayagarh, Odisha
+                    A contitutent unit of Divine Group of Institutions, Nayagarh, Odisha
                 </p>
               </div>
             </Link>
@@ -216,20 +216,20 @@ const Navbar: React.FC = () => {
             <Link href="/" className="flex flex-col items-center justify-center py-2 px-12">
               <Image
                 src="/divine.png"
-                alt="Divine Group of Institutions"
+                alt="Divine HIGHER SECONDARY SCHOOL"
                 width={100}
                 height={80}
                 className="rounded-full mb-2"
               />
               <div className="text-center">
                 <h1 className="font-bold text-[#003366] text-2xl leading-tight">
-                  DIVINE GROUP OF INSTITUTIONS
+                  DIVINE HIGHER SECONDARY SCHOOL
                 </h1>
                 <p className="text-[#003366] font-medium text-[9px] mt-0.5">
-                  (Under the aegis of Divine Educational Trust)
+                  (AFFILIATED INSTITUTE OF CHSE, ODISHA)
                 </p>
                 <p className="text-gray-600 text-[8px] mt-0.5">
-                  Nayagarh, Odisha
+                  A contitutent unit of Divine Group of Institutions, Nayagarh, Odisha
                 </p>
               </div>
             </Link>
@@ -341,4 +341,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default NavbarDHSS;
