@@ -1,4 +1,30 @@
 import React from 'react';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions - Privacy Policy & Online Payment",
+  description:
+    "Divine Group of Institutions Terms and Conditions, Privacy Policy, and Online Payment guidelines. Secure payment through authorized gateway. Data protection and refund policy information.",
+  keywords: [
+    "Terms and Conditions",
+    "Privacy Policy",
+    "Online Payment Terms",
+    "College Payment Policy",
+    "Data Protection",
+    "Refund Policy",
+    "Fee Payment Terms",
+    "Student Privacy",
+  ],
+  openGraph: {
+    title: "Terms & Conditions | Divine Group of Institutions",
+    description:
+      "Read our Terms and Conditions, Privacy Policy, and Online Payment guidelines.",
+    url: "https://divineinstitutions.edu.in/policies/terms",
+  },
+  alternates: {
+    canonical: "https://divineinstitutions.edu.in/policies/terms",
+  },
+};
 
 const TermsPage = () => {
   const sections = [

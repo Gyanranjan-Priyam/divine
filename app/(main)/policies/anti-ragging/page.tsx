@@ -1,4 +1,30 @@
 import React from 'react';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Anti-Ragging Policy - UGC Guidelines & Helpline",
+  description:
+    "Divine Group of Institutions Anti-Ragging Policy as per UGC Regulations 2009. Zero tolerance for ragging. Report ragging: National Anti-Ragging Helpline 1800-180-5522. Know your rights and responsibilities.",
+  keywords: [
+    "Anti Ragging Policy",
+    "UGC Anti Ragging",
+    "Ragging Helpline",
+    "College Anti Ragging",
+    "Student Safety",
+    "UGC Regulations 2009",
+    "Ragging Punishment",
+    "Safe Campus",
+  ],
+  openGraph: {
+    title: "Anti-Ragging Policy | Divine Group of Institutions",
+    description:
+      "Zero tolerance anti-ragging policy as per UGC guidelines. Report ragging incidents on 1800-180-5522.",
+    url: "https://divineinstitutions.edu.in/policies/anti-ragging",
+  },
+  alternates: {
+    canonical: "https://divineinstitutions.edu.in/policies/anti-ragging",
+  },
+};
 
 const AntiRaggingPage = () => {
   const sections = [

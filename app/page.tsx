@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   GraduationCap,
@@ -17,6 +18,34 @@ import {
   Quote,
 } from "lucide-react";
 
+export const metadata: Metadata = {
+  title: "Divine Group of Institutions | Best College & +2 School in Nayagarh, Odisha",
+  description:
+    "Welcome to Divine Group of Institutions, Nayagarh - the leading educational institution in Odisha. Offering +2 Science, Arts, Commerce at Divine Higher Secondary School and BA, BSc at Divine Degree College. SAMS Code: 24055302 (DDC), 24075102 (DHSS). Admissions Open 2025-26.",
+  keywords: [
+    "Divine Group of Institutions",
+    "Best College Nayagarh",
+    "Top +2 School Odisha",
+    "Divine Higher Secondary School",
+    "Divine Degree College",
+    "Education Nayagarh",
+    "CHSE Odisha",
+    "Science College",
+    "Arts College",
+    "Commerce College",
+  ],
+  openGraph: {
+    title: "Divine Group of Institutions | Best College & +2 School in Nayagarh",
+    description:
+      "Premier educational institution offering quality education in Nayagarh, Odisha. Admissions open for 2025-26.",
+    url: "https://divineinstitutions.edu.in",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://divineinstitutions.edu.in",
+  },
+};
+
 const facilities = [
   {
     icon: BookOpen,
@@ -30,8 +59,8 @@ const facilities = [
   },
   {
     icon: Dumbbell,
-    title: "Sports Complex",
-    desc: "Multi-sport facilities including cricket, football, basketball, and indoor games for holistic development.",
+    title: "1:1 Mentor Support",
+    desc: "Personalized mentoring and guidance to help students achieve their academic and career goals.",
   },
   {
     icon: Home,
@@ -45,8 +74,8 @@ const facilities = [
   },
   {
     icon: Target,
-    title: "Placement Cell",
-    desc: "Dedicated placement cell that bridges students with top recruiters through training programs and campus drives.",
+    title: "Most Experienced Faculty",
+    desc: "Highly qualified and experienced faculty members dedicated to providing quality education and mentorship to students.",
   },
 ];
 
@@ -73,7 +102,7 @@ const newsItems = [
 
 const affiliations = [
   "CHSE, Odisha",
-  "Berhampur University",
+  "Utkal University",
   "Govt. of Odisha",
   "UGC",
   "NAAC",
@@ -152,121 +181,54 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ===== ABOUT SECTION ===== */}
-      <section className="py-16 lg:py-20 bg-white">
+      {/* ===== ABOUT & INSTITUTIONS SECTION ===== */}
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-3">
-                About Us
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#003366] mb-6">
-                A Legacy of Academic Excellence
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Divine Group of Institutions, Nayagarh, is dedicated to
-                providing quality education that empowers students with
-                knowledge, skills, and values. Established with a vision to
-                create an institution of higher learning that combines
-                traditional wisdom with modern education practices.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Our institution comprises Divine Higher Secondary School and
-                Divine Degree College, both offering comprehensive programs
-                across multiple disciplines. We are committed to nurturing young
-                minds and preparing them for a successful future through
-                rigorous academics, extracurricular activities, and character
-                development.
-              </p>
-              <Link
-                href="/about/group"
-                className="inline-flex items-center gap-2 text-[#003366] font-semibold text-sm hover:text-[#D4A853] transition-colors"
-              >
-                Read More About Us <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Stats Grid */}
-            <div className="bg-[#f5f7fa] p-8">
-              <div className="grid grid-cols-2 gap-6">
-                {[
-                  { icon: Award, value: "15+", label: "Years of Excellence" },
-                  { icon: Users, value: "2000+", label: "Students Enrolled" },
-                  {
-                    icon: GraduationCap,
-                    value: "100+",
-                    label: "Qualified Faculty",
-                  },
-                  { icon: Trophy, value: "95%", label: "Placement Rate" },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center p-4">
-                    <div className="w-12 h-12 bg-[#003366] rounded flex items-center justify-center mx-auto mb-3">
-                      <stat.icon className="w-6 h-6 text-[#D4A853]" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-[#003366]">
-                      {stat.value}
-                    </h3>
-                    <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== OUR INSTITUTIONS ===== */}
-      <section className="py-16 lg:py-20 bg-[#f5f5f5]">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-3">
-              Our Institutions
+          {/* Header */}
+          <div className="text-center mb-10">
+            <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-2">
+              About Us
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#003366]">
-              Centres of Learning
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#003366] mb-4">
+              A Legacy of Academic Excellence
             </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Divine Group of Institutions, Nayagarh, is dedicated to providing quality education 
+              that empowers students with knowledge, skills, and values through rigorous academics 
+              and character development.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* DHSS */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-[#003366] rounded flex items-center justify-center mb-5">
-                <BookOpen className="w-7 h-7 text-[#D4A853]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#003366] mb-3">
-                Divine Higher Secondary School
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-5">
-                Providing quality +2 education in Science, Commerce, and Arts
-                streams with experienced faculty and modern teaching
-                methodologies. Affiliated to CHSE, Odisha.
+
+          {/* Our Institutions */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-[#003366] to-[#004488] text-white p-6 rounded-lg">
+              <BookOpen className="w-10 h-10 text-[#D4A853] mb-3" />
+              <h3 className="text-xl font-bold mb-2">Divine Higher Secondary School</h3>
+              <p className="text-sm text-gray-200 mb-4">
+                Quality +2 education in Science, Commerce, and Arts streams. Affiliated to CHSE, Odisha.
               </p>
-              <Link
-                href="/dhss"
-                className="inline-flex items-center gap-2 text-[#003366] font-semibold text-sm hover:text-[#D4A853] transition-colors"
-              >
+              <Link href="/dhss" className="inline-flex items-center gap-2 text-[#D4A853] font-semibold text-sm hover:gap-3 transition-all">
                 Visit DHSS <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            {/* DDC */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-[#003366] rounded flex items-center justify-center mb-5">
-                <GraduationCap className="w-7 h-7 text-[#D4A853]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#003366] mb-3">
-                Divine Degree College
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-5">
-                Offering undergraduate programs in Arts, Science, and Commerce
-                with focus on holistic development, research orientation, and
-                career readiness.
+
+            <div className="bg-gradient-to-br from-[#003366] to-[#004488] text-white p-6 rounded-lg">
+              <GraduationCap className="w-10 h-10 text-[#D4A853] mb-3" />
+              <h3 className="text-xl font-bold mb-2">Divine Degree College</h3>
+              <p className="text-sm text-gray-200 mb-4">
+                Undergraduate programs in Arts, Science, and Commerce with focus on holistic development.
               </p>
-              <Link
-                href="/ddc"
-                className="inline-flex items-center gap-2 text-[#003366] font-semibold text-sm hover:text-[#D4A853] transition-colors"
-              >
+              <Link href="/ddc" className="inline-flex items-center gap-2 text-[#D4A853] font-semibold text-sm hover:gap-3 transition-all">
                 Visit DDC <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+          </div>
+
+          {/* Read More Link */}
+          <div className="text-center mt-8">
+            <Link href="/about/group" className="inline-flex items-center gap-2 text-[#003366] font-semibold hover:text-[#D4A853] transition-colors">
+              Learn More About Us <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -290,6 +252,47 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* ===== CHAIRMAN'S MESSAGE ===== */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-2 flex justify-center">
+              <div className="w-60 h-72 bg-[#e8edf2] border-4 border-[#D4A853] flex items-center justify-center">
+                <Users className="w-16 h-16 text-[#003366] opacity-20" />
+              </div>
+            </div>
+            <div className="lg:col-span-3">
+              <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-3">
+                From the Desk
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#003366] mb-6">
+                Chairman&apos;s Message
+              </h2>
+              <div className="relative mb-6">
+                <Quote className="w-8 h-8 text-[#D4A853] opacity-40 absolute -top-2 -left-2" />
+                <blockquote className="text-gray-600 leading-relaxed border-l-4 border-[#D4A853] pl-5 ml-4 italic">
+                  Education is not the filling of a pail, but the lighting of a
+                  fire. At Divine Group of Institutions, we strive to ignite
+                  that flame of curiosity and excellence in every student who
+                  walks through our doors.
+                </blockquote>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-5">
+                We are committed to providing an environment that fosters
+                intellectual growth, character building, and professional
+                development. Our vision is to create responsible citizens who
+                contribute positively to society and the nation through
+                education, innovation, and service.
+              </p>
+              <p className="font-semibold text-[#003366]">
+                — Chairman, Divine Group of Institutions
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -376,45 +379,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== CHAIRMAN'S MESSAGE ===== */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-5 gap-10 items-center">
-            <div className="lg:col-span-2 flex justify-center">
-              <div className="w-60 h-72 bg-[#e8edf2] border-4 border-[#D4A853] flex items-center justify-center">
-                <Users className="w-16 h-16 text-[#003366] opacity-20" />
-              </div>
-            </div>
-            <div className="lg:col-span-3">
-              <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-3">
-                From the Desk
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#003366] mb-6">
-                Chairman&apos;s Message
-              </h2>
-              <div className="relative mb-6">
-                <Quote className="w-8 h-8 text-[#D4A853] opacity-40 absolute -top-2 -left-2" />
-                <blockquote className="text-gray-600 leading-relaxed border-l-4 border-[#D4A853] pl-5 ml-4 italic">
-                  Education is not the filling of a pail, but the lighting of a
-                  fire. At Divine Group of Institutions, we strive to ignite
-                  that flame of curiosity and excellence in every student who
-                  walks through our doors.
-                </blockquote>
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-5">
-                We are committed to providing an environment that fosters
-                intellectual growth, character building, and professional
-                development. Our vision is to create responsible citizens who
-                contribute positively to society and the nation through
-                education, innovation, and service.
-              </p>
-              <p className="font-semibold text-[#003366]">
-                — Chairman, Divine Group of Institutions
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ===== ADMISSIONS CTA ===== */}
       <section className="bg-[#003366] py-14">

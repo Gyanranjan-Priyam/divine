@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
   return (
     <header>
       {/* Top Utility Bar */}
-      <div className="bg-[#003366] text-white py-2 px-4 text-center">
+      <div className={`bg-[#003366] text-white py-2 px-4 text-center transition-all duration-300 ${scrolled ? "h-0 py-0 overflow-hidden opacity-0" : ""}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center text-xs sm:text-sm">
           <div className="hidden sm:flex items-center gap-5">
             <span className="flex items-center gap-1.5">
@@ -130,44 +130,44 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Logo & Institution Name */}
-      <div className="bg-white border-b border-gray-200 max-h-[50vh] overflow-y-auto">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-4">
-            <Image
-              src="/divine.png"
-              alt="Divine Group of Institutions"
-              width={65}
-              height={65}
-              className="rounded-full"
-            />
-            <div>
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#003366] tracking-tight leading-tight">
-                DIVINE GROUP OF INSTITUTIONS
-              </h1>
-              <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
-                Nayagarh, Odisha
-              </p>
-            </div>
-          </Link>
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#003366] hover:bg-gray-100 rounded"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+      {/* Logo & Navigation Wrapper - Becomes Sticky */}
+      <div className={`transition-all duration-300 ${scrolled ? "fixed top-0 left-0 right-0 z-50 shadow-lg" : ""}`}>
+        {/* Logo & Institution Name */}
+        <div className="bg-white border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/divine.png"
+                alt="Divine Group of Institutions"
+                width={scrolled ? 50 : 65}
+                height={scrolled ? 50 : 65}
+                className="rounded-full transition-all duration-300"
+              />
+              <div>
+                <h1 className={`font-bold text-[#003366] tracking-tight leading-tight transition-all duration-300 ${scrolled ? "text-lg sm:text-xl lg:text-2xl" : "text-xl sm:text-2xl lg:text-3xl"}`}>
+                  DIVINE GROUP OF INSTITUTIONS
+                </h1>
+                <p className={`text-gray-500 mt-0.5 transition-all duration-300 ${scrolled ? "text-[10px] sm:text-xs" : "text-xs sm:text-sm"}`}>
+                  Nayagarh, Odisha
+                </p>
+              </div>
+            </Link>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 text-[#003366] hover:bg-gray-100 rounded"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Navigation Bar */}
-      <nav
-        className={`bg-[#003366] transition-shadow ${scrolled ? "sticky top-0 z-50 shadow-md" : ""}`}
-      >
+        {/* Navigation Bar */}
+        <nav className="bg-[#003366]">
         <div className="max-w-7xl mx-auto px-4">
           <ul className="hidden lg:flex items-center justify-center">
             {navItems.map((item) => (
@@ -211,61 +211,62 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200 max-h-[70vh] overflow-y-auto">
-            <ul className="py-1">
-              {navItems.map((item) => (
-                <li
-                  key={item.name}
-                  className="border-b border-gray-100 last:border-b-0"
-                >
-                  {item.submenu ? (
-                    <div>
-                      <button
-                        onClick={() =>
-                          setMobileSubmenu(
-                            mobileSubmenu === item.name ? null : item.name,
-                          )
-                        }
-                        className="w-full flex items-center justify-between px-5 py-3 text-sm font-medium text-gray-800 hover:bg-gray-50"
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden bg-white border-t border-gray-200 max-h-[70vh] overflow-y-auto">
+              <ul className="py-1">
+                {navItems.map((item) => (
+                  <li
+                    key={item.name}
+                    className="border-b border-gray-100 last:border-b-0"
+                  >
+                    {item.submenu ? (
+                      <div>
+                        <button
+                          onClick={() =>
+                            setMobileSubmenu(
+                              mobileSubmenu === item.name ? null : item.name,
+                            )
+                          }
+                          className="w-full flex items-center justify-between px-5 py-3 text-sm font-medium text-gray-800 hover:bg-gray-50"
+                        >
+                          {item.name}
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform ${mobileSubmenu === item.name ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                        {mobileSubmenu === item.name && (
+                          <ul className="bg-gray-50 border-t border-gray-100">
+                            {item.submenu.map((sub) => (
+                              <li key={sub.name}>
+                                <Link
+                                  href={sub.href}
+                                  className="block px-8 py-2.5 text-sm text-gray-600 hover:text-[#003366] hover:bg-white transition-colors"
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {sub.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href || "#"}
+                        className="block px-5 py-3 text-sm font-medium text-gray-800 hover:bg-gray-50 hover:text-[#003366] transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform ${mobileSubmenu === item.name ? "rotate-180" : ""}`}
-                        />
-                      </button>
-                      {mobileSubmenu === item.name && (
-                        <ul className="bg-gray-50 border-t border-gray-100">
-                          {item.submenu.map((sub) => (
-                            <li key={sub.name}>
-                              <Link
-                                href={sub.href}
-                                className="block px-8 py-2.5 text-sm text-gray-600 hover:text-[#003366] hover:bg-white transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {sub.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href || "#"}
-                      className="block px-5 py-3 text-sm font-medium text-gray-800 hover:bg-gray-50 hover:text-[#003366] transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </nav>
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </nav>
+      </div>
     </header>
   );
 };
