@@ -69,6 +69,7 @@ const navItems: NavItem[] = [
       { name: "Hostel", href: "/facilities/hostel" },
     ],
   },
+  { name: "Pay Online", href: "/pay-online" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -120,11 +121,6 @@ const Navbar: React.FC = () => {
                   );
                 })}
               </div>
-              <Button size="sm" className="text-xs">
-                <Link href="/pay-online" className="hover:text-[#D4A853] transition-colors">
-                  Pay Online
-                </Link>
-              </Button>
             </div>
           </div>
 
@@ -158,9 +154,6 @@ const Navbar: React.FC = () => {
                   );
                 })}
               </div>
-              <Button size="sm" className="text-[9px] h-5 px-2 py-0">
-                <Link href="/pay-online">Pay</Link>
-              </Button>
             </div>
           </div>
         </div>

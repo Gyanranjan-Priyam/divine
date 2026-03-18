@@ -92,7 +92,7 @@ const facilities = [
   },
 ];
 
-const newsItems = [
+const noticeItems = [
   {
     date: "Mar 10, 2026",
     title: "Annual Science Exhibition 2026",
@@ -342,21 +342,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== NEWS & EVENTS ===== */}
+      {/* ===== NOTICES ===== */}
       <section className="py-16 lg:py-20 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-3">
-              Stay Updated
+              Important Updates
             </p>
             <h2 className="text-3xl lg:text-4xl font-bold text-[#003366]">
-              Latest News &amp; Events
+              Notices
             </h2>
           </div>
           <div className="grid lg:grid-cols-3 gap-6">
-            {newsItems.map((news) => (
+            {noticeItems.map((notice) => (
               <article
-                key={news.title}
+                key={notice.title}
                 className="bg-white border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
               >
                 <div className="h-44 bg-[#e8edf2] flex items-center justify-center">
@@ -365,17 +365,17 @@ export default function HomePage() {
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-semibold text-[#D4A853] bg-[#faf6eb] px-2.5 py-1">
-                      {news.tag}
+                      {notice.tag}
                     </span>
                     <span className="text-xs text-gray-400 flex items-center gap-1">
-                      <Calendar className="w-3 h-3" /> {news.date}
+                      <Calendar className="w-3 h-3" /> {notice.date}
                     </span>
                   </div>
                   <h3 className="text-base font-semibold text-[#003366] mb-2 leading-snug">
-                    {news.title}
+                    {notice.title}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    {news.desc}
+                    {notice.desc}
                   </p>
                 </div>
               </article>
@@ -383,10 +383,10 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-10">
             <Link
-              href="/news"
+              href="/notices"
               className="inline-flex items-center gap-2 border-2 border-[#003366] text-[#003366] font-semibold px-7 py-3 text-sm hover:bg-[#003366] hover:text-white transition-colors"
             >
-              View All News <ArrowRight className="w-4 h-4" />
+              View All Notices <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
