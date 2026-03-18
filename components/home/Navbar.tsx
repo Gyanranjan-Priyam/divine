@@ -185,11 +185,11 @@ const Navbar: React.FC = () => {
                 <h1 className="font-bold text-[#003366] tracking-tight leading-tight text-2xl sm:text-3xl lg:text-5xl">
                   DIVINE GROUP OF INSTITUTIONS
                 </h1>
-                <p className="text-[#003366] font-medium mt-1 sm:mt-2 text-base sm:text-lg lg:text-xl">
-                  (Under the aegis of Divine Educational Trust)
+                <p className="text-gray-600 text-2xl sm:text-3xl mt-1 font-bold">
+                  || ज्ञानम् सर्वजनहिताय ||
                 </p>
-                <p className="text-gray-600 mt-1 text-sm sm:text-base">
-                  Nayagarh, Odisha
+                <p className="text-[#003366] font-bold mt-1 sm:mt-2 text-base sm:text-lg lg:text-xl">
+                  (Under the aegis of Divine Educational Trust)
                 </p>
               </div>
             </Link>
@@ -222,14 +222,14 @@ const Navbar: React.FC = () => {
                 className="rounded-full mb-2"
               />
               <div className="text-center">
-                <h1 className="font-bold text-[#003366] text-2xl leading-tight">
+                <h1 className="font-bold text-[#003366] text-3xl leading-tight">
                   DIVINE GROUP OF INSTITUTIONS
                 </h1>
-                <p className="text-[#003366] font-medium text-[9px] mt-0.5">
-                  (Under the aegis of Divine Educational Trust)
+                <p className="text-gray-600 text-lg font-bold mt-1">
+                  || ज्ञानम् सर्वजनहिताय ||
                 </p>
-                <p className="text-gray-600 text-[8px] mt-0.5">
-                  Nayagarh, Odisha
+                <p className="text-[#003366] font-bold text-[10px] mt-0.5">
+                  (Under the aegis of Divine Educational Trust)
                 </p>
               </div>
             </Link>

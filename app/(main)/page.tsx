@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   GraduationCap,
   BookOpen,
   Users,
-  Trophy,
   Building2,
   FlaskConical,
   Dumbbell,
   Home,
   Calendar,
   ArrowRight,
-  Star,
-  Award,
   Target,
   Newspaper,
   Quote,
@@ -116,11 +114,11 @@ const newsItems = [
 ];
 
 const affiliations = [
-  "CHSE, Odisha",
-  "Utkal University",
-  "Govt. of Odisha",
-  "UGC",
-  "NAAC",
+  { name: "CHSE, Odisha", logo: "/affiliation/chse.png" },
+  { name: "Utkal University", logo: "/affiliation/uu.png" },
+  { name: "Govt. of Odisha", logo: "/affiliation/gov.svg" },
+  { name: "UGC", logo: "/affiliation/ugc.png" },
+  { name: "NAAC", logo: "/affiliation/naac.png" },
 ];
 
 export default function HomePage() {
@@ -395,39 +393,6 @@ export default function HomePage() {
       </section>
 
 
-      {/* ===== ADMISSIONS CTA ===== */}
-      <section className="bg-[#003366] py-14">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Admissions Open for 2026-27
-          </h2>
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Begin your journey towards a bright future. Apply now for admissions
-            across all programs at Divine Higher Secondary School and Divine
-            Degree College.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/admissions/apply"
-              className="inline-flex items-center gap-2 bg-[#D4A853] text-[#003366] font-semibold px-8 py-3 text-sm hover:bg-[#c49a48] transition-colors"
-            >
-              Apply Online <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/admissions/process"
-              className="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3 text-sm hover:bg-white hover:text-[#003366] transition-colors"
-            >
-              Admission Process
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 border-2 border-[#D4A853] text-[#D4A853] font-semibold px-8 py-3 text-sm hover:bg-[#D4A853] hover:text-[#003366] transition-colors"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ===== AFFILIATIONS ===== */}
       <section className="py-12 bg-white border-t border-gray-100">
@@ -437,13 +402,19 @@ export default function HomePage() {
               Affiliations &amp; Recognitions
             </p>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-10">
-            {affiliations.map((name) => (
-              <div key={name} className="text-center">
-                <div className="w-16 h-16 bg-[#f5f7fa] rounded-full flex items-center justify-center mx-auto mb-2 border border-gray-200">
-                  <Star className="w-6 h-6 text-[#003366]" />
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+            {affiliations.map((item) => (
+              <div key={item.name} className="text-center">
+                <div className="w-20 h-20 flex items-center justify-center mx-auto mb-2">
+                  <Image
+                    src={item.logo}
+                    alt={item.name}
+                    width={80}
+                    height={80}
+                    className="object-contain max-h-16"
+                  />
                 </div>
-                <p className="text-xs text-gray-500 font-medium">{name}</p>
+                <p className="text-xs text-gray-500 font-medium">{item.name}</p>
               </div>
             ))}
           </div>

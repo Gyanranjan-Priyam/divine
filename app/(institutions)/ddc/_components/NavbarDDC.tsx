@@ -185,10 +185,10 @@ const NavbarDHSS: React.FC = () => {
                 <h1 className="font-bold text-[#003366] tracking-tight leading-tight text-2xl sm:text-3xl lg:text-5xl">
                   DIVINE DEGREE COLLEGE
                 </h1>
-                <p className="text-[#003366] font-medium mt-1 sm:mt-2 text-base sm:text-lg lg:text-xl">
+                <p className="text-[#003366] font-bold mt-1 sm:mt-2 text-base sm:text-lg lg:text-xl">
                   (AFFILIATED INSTITUTE OF UTKAL UNIVERSITY, ODISHA)
                 </p>
-                <p className="text-gray-600 mt-1 text-sm sm:text-base">
+                <p className="text-gray-600 font-bold mt-1 text-sm sm:text-base">
                   A contitutent unit of Divine Group of Institutions, Nayagarh, Odisha
                 </p>
               </div>
@@ -222,13 +222,13 @@ const NavbarDHSS: React.FC = () => {
                 className="rounded-full mb-2"
               />
               <div className="text-center">
-                <h1 className="font-bold text-[#003366] text-2xl leading-tight">
+                <h1 className="font-bold text-[#003366] text-3xl leading-tight">
                   DIVINE DEGREE COLLEGE
                 </h1>
-                <p className="text-[#003366] font-medium text-[9px] mt-0.5">
+                <p className="text-[#003366] font-bold text-[10px] mt-0.5">
                   (AFFILIATED INSTITUTE OF UTKAL UNIVERSITY, ODISHA)
                 </p>
-                <p className="text-gray-600 text-[8px] mt-0.5">
+                <p className="text-gray-600 font-bold text-[8px] mt-0.5">
                   A contitutent unit of Divine Group of Institutions, Nayagarh, Odisha
                 </p>
               </div>
