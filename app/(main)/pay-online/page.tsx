@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pay Online | Divine Group of Institutions",
     description: "Secure online fee payment portal for students.",
-    url: "https://divineinstitutions.edu.in/pay-online",
+    url: "https://divinengrh.com/pay-online",
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in/pay-online",
+    canonical: "https://divinengrh.com/pay-online",
   },
 };
 

@@ -38,11 +38,26 @@ export const metadata: Metadata = {
     title: "Divine Group of Institutions | Best College & +2 School in Nayagarh",
     description:
       "Premier educational institution offering quality education in Nayagarh, Odisha. Admissions open for 2025-26.",
-    url: "https://divineinstitutions.edu.in",
+    url: "https://divinengrh.com",
     type: "website",
+    images: [
+      {
+        url: "/og-image-1200.png",
+        width: 1200,
+        height: 1200,
+        alt: "Divine Group of Institutions Logo - Nayagarh, Odisha",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Divine Group of Institutions | Best College & +2 School in Nayagarh",
+    description:
+      "Premier educational institution offering quality education in Nayagarh, Odisha. Admissions open for 2025-26.",
+    images: ["/og-image-1200.png"],
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in",
+    canonical: "https://divinengrh.com",
   },
 };
 

@@ -60,17 +60,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://divineinstitutions.edu.in",
+    url: "https://divinengrh.com",
     siteName: "Divine Group of Institutions",
     title: "Divine Group of Institutions | Best College in Nayagarh, Odisha",
     description:
       "Premier educational institution in Nayagarh, Odisha offering quality education through Divine Higher Secondary School (+2) and Divine Degree College (UG). SAMS Odisha affiliated.",
     images: [
       {
-        url: "/icons/icon-512x512.png",
-        width: 512,
-        height: 512,
+        url: "/og-image-1200.png",
+        width: 1200,
+        height: 1200,
+        alt: "Divine Group of Institutions - Nayagarh, Odisha - Established 2013",
+        type: "image/png",
+      },
+      {
+        url: "/og-image-social.png",
+        width: 1200,
+        height: 630,
         alt: "Divine Group of Institutions Logo",
+        type: "image/png",
       },
     ],
   },
@@ -79,7 +87,9 @@ export const metadata: Metadata = {
     title: "Divine Group of Institutions | Best College in Nayagarh, Odisha",
     description:
       "Premier educational institution in Nayagarh, Odisha offering quality education through Divine Higher Secondary School and Divine Degree College.",
-    images: ["/icons/icon-512x512.png"],
+    images: ["/og-image-1200.png"],
+    creator: "@divineNayagarh",
+    site: "@divineNayagarh",
   },
   manifest: "/manifest.json",
   appleWebApp: {
@@ -91,7 +101,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in",
+    canonical: "https://divinengrh.com",
   },
   category: "Education",
   verification: {
@@ -121,7 +131,7 @@ export default function MainRootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
-        <link rel="canonical" href="https://divineinstitutions.edu.in" />
+        <link rel="canonical" href="https://divinengrh.com" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Divine Institutions" />
@@ -139,8 +149,14 @@ export default function MainRootLayout({
               "@type": "EducationalOrganization",
               name: "Divine Group of Institutions",
               alternateName: ["DHSS", "DDC", "Divine Institutions"],
-              url: "https://divineinstitutions.edu.in",
-              logo: "https://divineinstitutions.edu.in/icons/icon-512x512.png",
+              url: "https://divinengrh.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://divinengrh.com/og-image-1200.png",
+                width: 1200,
+                height: 1200,
+              },
+              image: "https://divinengrh.com/og-image-1200.png",
               description:
                 "Divine Group of Institutions is a premier educational institution in Nayagarh, Odisha, comprising Divine Higher Secondary School and Divine Degree College.",
               foundingDate: "2013",

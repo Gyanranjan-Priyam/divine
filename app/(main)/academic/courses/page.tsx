@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     title: "Courses Offered at Divine Group of Institutions",
     description:
       "Comprehensive academic programs in Science, Arts, and Commerce at both +2 and Degree levels.",
-    url: "https://divineinstitutions.edu.in/academic/courses",
+    url: "https://divinengrh.com/academic/courses",
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in/academic/courses",
+    canonical: "https://divinengrh.com/academic/courses",
   },
 };
 

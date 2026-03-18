@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     title: "Scholarships & Financial Aid | Divine Group of Institutions",
     description:
       "Complete scholarship guide for State and Central government schemes. SC, ST, OBC, Minority scholarships available.",
-    url: "https://divineinstitutions.edu.in/admissions/scholarships",
+    url: "https://divinengrh.com/admissions/scholarships",
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in/admissions/scholarships",
+    canonical: "https://divinengrh.com/admissions/scholarships",
   },
 };
 

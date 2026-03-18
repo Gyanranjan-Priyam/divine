@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     title: "Admission Process 2025-26 | Divine Group of Institutions",
     description:
       "Step-by-step admission guide through SAMS Odisha Portal. Required documents, cutoff marks, and important links.",
-    url: "https://divineinstitutions.edu.in/admissions/process",
+    url: "https://divinengrh.com/admissions/process",
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in/admissions/process",
+    canonical: "https://divinengrh.com/admissions/process",
   },
 };
 
@@ -364,7 +364,7 @@ const AdmissionProcessPage = () => {
                 </h3>
                 <p className="text-sm mb-2">📞 Contact: +91 1234 567 890</p>
                 <p className="text-sm">
-                  ✉️ Email: dhss@divineinstitutions.edu.in
+                  ✉️ Email: dhss@divinengrh.com
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">

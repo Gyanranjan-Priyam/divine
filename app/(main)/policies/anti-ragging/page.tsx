@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     title: "Anti-Ragging Policy | Divine Group of Institutions",
     description:
       "Zero tolerance anti-ragging policy as per UGC guidelines. Report ragging incidents on 1800-180-5522.",
-    url: "https://divineinstitutions.edu.in/policies/anti-ragging",
+    url: "https://divinengrh.com/policies/anti-ragging",
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in/policies/anti-ragging",
+    canonical: "https://divinengrh.com/policies/anti-ragging",
   },
 };
 
@@ -113,7 +113,7 @@ const AntiRaggingPage = () => {
         "Divine Group of Institutions has established multiple channels for reporting ragging incidents:",
         "• Direct complaint to the Head of Institution, Anti-Ragging Committee, or Anti-Ragging Squad members",
         "• Written complaints can be submitted in sealed envelopes in complaint boxes placed at strategic locations",
-        "• Email complaints to the designated institutional email address: antiragging@divineinstitutions.edu.in",
+        "• Email complaints to the designated institutional email address: antiragging@divinengrh.com",
         "• Telephonic complaints to the institutional helpline: [Helpline Number]",
         "• Anonymous complaints through suggestion boxes",
         "• National Anti-Ragging Helpline: 1800-180-5522 (24x7 Toll-Free)",
@@ -283,7 +283,7 @@ const AntiRaggingPage = () => {
         "Anti-Ragging Committee",
         "Divine Group of Institutions",
         "Nayagarh, Odisha",
-        "Email: antiragging@divineinstitutions.edu.in",
+        "Email: antiragging@divinengrh.com",
         "Institutional Helpline: [Helpline Number]",
         "",
         "National Anti-Ragging Helpline:",

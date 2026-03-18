@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     title: "Fee Structure 2025-26 | Divine Group of Institutions",
     description:
       "Detailed fee information for admission, courses, and hostel at Divine Higher Secondary School and Divine Degree College.",
-    url: "https://divineinstitutions.edu.in/admissions/fees",
+    url: "https://divinengrh.com/admissions/fees",
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in/admissions/fees",
+    canonical: "https://divinengrh.com/admissions/fees",
   },
 };
 
@@ -533,7 +533,7 @@ const FeesPage = () => {
                   Divine Higher Secondary School
                 </p>
                 <p className="text-sm mb-1">📞 +91 1234 567 890</p>
-                <p className="text-sm">✉️ dhss@divineinstitutions.edu.in</p>
+                <p className="text-sm">✉️ dhss@divinengrh.com</p>
               </div>
             </div>
           </div>

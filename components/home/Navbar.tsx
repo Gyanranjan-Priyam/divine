@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
             </span>
             <span className="flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5" />
-              info@divineinstitutions.edu.in
+              info@divinengrh.com
             </span>
           </div>
           <div className="flex items-center gap-4 ml-auto sm:ml-0">

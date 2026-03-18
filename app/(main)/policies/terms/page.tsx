@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     title: "Terms & Conditions | Divine Group of Institutions",
     description:
       "Read our Terms and Conditions, Privacy Policy, and Online Payment guidelines.",
-    url: "https://divineinstitutions.edu.in/policies/terms",
+    url: "https://divinengrh.com/policies/terms",
   },
   alternates: {
-    canonical: "https://divineinstitutions.edu.in/policies/terms",
+    canonical: "https://divinengrh.com/policies/terms",
   },
 };
 
@@ -198,7 +198,7 @@ const TermsPage = () => {
         "For any queries, clarifications, or concerns regarding these Terms and Conditions, please contact:",
         "Divine Group of Institutions",
         "Nayagarh, Odisha",
-        "Email: info@divineinstitutions.edu.in",
+        "Email: info@divinengrh.com",
         "Phone: [Contact Number]"
       ]
     }
