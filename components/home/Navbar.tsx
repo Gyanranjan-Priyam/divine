@@ -38,8 +38,8 @@ const navItems: NavItem[] = [
   {
     name: "Institutions",
     submenu: [
-      { name: "Divine Higher Secondary School", href: `${process.env.NODE_ENV === 'production' ? 'https' : 'http'}://dhss.${process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'localhost:3000'}` },
-      { name: "Divine Degree College", href: `${process.env.NODE_ENV === 'production' ? 'https' : 'http'}://ddc.${process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'localhost:3000'}` },
+      { name: "Divine Higher Secondary School", href: "/dhss" },
+      { name: "Divine Degree College", href: "/ddc" },
     ],
   },
   {

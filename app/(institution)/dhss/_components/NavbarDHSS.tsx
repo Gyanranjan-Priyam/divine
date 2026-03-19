@@ -29,51 +29,51 @@ const socialLinks = [
 ];
 
 const navItems: NavItem[] = [
-  { name: "Home", href: `${baseUrl}/` },
+  { name: "Home", href: "/" },
   {
     name: "About",
     submenu: [
-      { name: "About Divine Group", href: `${baseUrl}/about/group` },
-      { name: "Vision & Mission", href: `${baseUrl}/about/vision` },
-      { name: "Infrastructure", href: `${baseUrl}/about/infrastructure` },
-      { name: "Achievements", href: `${baseUrl}/about/achievements` },
+      { name: "About Divine Group", href: "/about/group" },
+      { name: "Vision & Mission", href: "/about/vision" },
+      { name: "Infrastructure", href: "/about/infrastructure" },
+      { name: "Achievements", href: "/about/achievements" },
     ],
   },
   {
     name: "Institutions",
     submenu: [
-      { name: "Divine Higher Secondary School", href: `${protocol}://dhss.${rootDomain}` },
-      { name: "Divine Degree College", href: `${protocol}://ddc.${rootDomain}` },
+      { name: "Divine Higher Secondary School", href: "/dhss" },
+      { name: "Divine Degree College", href: "/ddc" },
     ],
   },
   {
     name: "Academics",
     submenu: [
-      { name: "Courses Offered", href: `${baseUrl}/academic/courses` },
-      { name: "Curriculum", href: `${baseUrl}/academic/curriculum` },
-      { name: "Examination", href: `${baseUrl}/academic/examination` },
-      { name: "Academic Calendar", href: `${baseUrl}/academic/calendar` },
+      { name: "Courses Offered", href: "/academic/courses" },
+      { name: "Curriculum", href: "/academic/curriculum" },
+      { name: "Examination", href: "/academic/examination" },
     ],
   },
   {
     name: "Admissions",
     submenu: [
-      { name: "Admission Process", href: `${baseUrl}/admissions/process` },
-      { name: "Fee Structure", href: `${baseUrl}/admissions/fees` },
-      { name: "Scholarships", href: `${baseUrl}/admissions/scholarships` },
-      { name: "Apply Online", href: `${baseUrl}/admissions/apply` },
+      { name: "Admission Process", href: "/admissions/process" },
+      { name: "Fee Structure", href: "/admissions/fees" },
+      { name: "Scholarships", href: "/admissions/scholarships" },
+      { name: "Apply Online", href: "/admissions/apply" },
     ],
   },
   {
     name: "Facilities",
     submenu: [
-      { name: "Library", href: `${baseUrl}/facilities/library` },
-      { name: "Laboratories", href: `${baseUrl}/facilities/labs` },
-      { name: "Sports", href: `${baseUrl}/facilities/sports` },
-      { name: "Hostel", href: `${baseUrl}/facilities/hostel` },
+      { name: "Library", href: "/facilities/library" },
+      { name: "Laboratories", href: "/facilities/labs" },
+      { name: "Sports", href: "/facilities/sports" },
+      { name: "Hostel", href: "/facilities/hostel" },
     ],
   },
-  { name: "Contact", href: `${baseUrl}/contact` },
+  { name: "Pay Online", href: "/pay-online" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const NavbarDHSS: React.FC = () => {
@@ -187,13 +187,13 @@ const NavbarDHSS: React.FC = () => {
               />
               <div className="text-center">
                 <h1 className="font-bold text-[#003366] tracking-tight leading-tight text-2xl sm:text-3xl lg:text-5xl">
-                  DIVINE DEGREE COLLEGE
+                  DIVINE HIGHER SECONDARY SCHOOL
                 </h1>
                 <p className="text-[#003366] font-bold mt-1 sm:mt-2 text-base sm:text-lg lg:text-xl">
-                  (AFFILIATED INSTITUTE OF UTKAL UNIVERSITY, ODISHA)
+                  (AFFILIATED INSTITUTE OF CHSE, ODISHA)
                 </p>
-                <p className="text-gray-600 font-bold mt-1 text-sm sm:text-base">
-                  A contitutent unit of Divine Group of Institutions, Nayagarh, Odisha
+                <p className="text-gray-600 mt-1 font-bold text-sm sm:text-base">
+                    A contitutent unit of Divine Group of Institutions, Nayagarh, Odisha
                 </p>
               </div>
             </Link>
@@ -202,7 +202,7 @@ const NavbarDHSS: React.FC = () => {
 
         {/* Mobile Header - Only on Very Small Screens */}
         <div className="sm:hidden bg-white border-b border-gray-200">
-          <div className="px-3 py-2 relative">
+          <div className="px-2 py-2 relative">
             {/* Hamburger Menu Button - Absolute Left */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -227,12 +227,12 @@ const NavbarDHSS: React.FC = () => {
               />
               <div className="text-center">
                 <h1 className="font-bold text-[#003366] text-3xl leading-tight">
-                  DIVINE DEGREE COLLEGE
+                  DIVINE HIGHER SECONDARY SCHOOL
                 </h1>
                 <p className="text-[#003366] font-bold text-[10px] mt-0.5">
-                  (AFFILIATED INSTITUTE OF UTKAL UNIVERSITY, ODISHA)
+                  (AFFILIATED INSTITUTE OF CHSE, ODISHA)
                 </p>
-                <p className="text-gray-600 font-bold text-[8px] mt-0.5">
+                <p className="text-gray-600 font-bold text-[10px] mt-0.5">
                   A contitutent unit of Divine Group of Institutions, Nayagarh, Odisha
                 </p>
               </div>

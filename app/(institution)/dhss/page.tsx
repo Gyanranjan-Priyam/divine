@@ -3,9 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   Users,
-  Calendar,
   ArrowRight,
-  Newspaper,
   Quote,
 } from "lucide-react";
 import { achievementDhssData } from "./_data/achievementDhssData";
@@ -186,7 +184,7 @@ export default function DHSSPage() {
               </div>
               <div className="mt-8">
                 <Link
-                  href="/about"
+                  href="/dhss/about"
                   className="inline-flex items-center gap-2 text-[#003366] font-semibold hover:text-[#D4A853] transition-colors"
                 >
                   Learn More About DHSS <ArrowRight className="w-4 h-4" />
