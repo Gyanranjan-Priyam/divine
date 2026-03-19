@@ -1,6 +1,4 @@
-import React from "react";
 import type { Metadata } from "next";
-import { GraduationCap, BookOpen } from "lucide-react";
 import { coursesData } from "@/data/courseData";
 
 export const metadata: Metadata = {

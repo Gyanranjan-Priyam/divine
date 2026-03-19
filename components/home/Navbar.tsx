@@ -48,7 +48,6 @@ const navItems: NavItem[] = [
       { name: "Courses Offered", href: "/academic/courses" },
       { name: "Curriculum", href: "/academic/curriculum" },
       { name: "Examination", href: "/academic/examination" },
-      { name: "Academic Calendar", href: "/academic/calendar" },
     ],
   },
   {

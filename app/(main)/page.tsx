@@ -252,9 +252,9 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
               { value: "2000+", label: "Students" },
-              { value: "100+", label: "Faculty Members" },
-              { value: "20+", label: "Programs Offered" },
-              { value: "15+", label: "Years of Excellence" },
+              { value: "40+", label: "Faculty Members" },
+              { value: "10+", label: "Programs Offered" },
+              { value: "13+", label: "Years of Excellence" },
             ].map((stat) => (
               <div key={stat.label}>
                 <h3 className="text-3xl lg:text-4xl font-bold text-[#D4A853]">
