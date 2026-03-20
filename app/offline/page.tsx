@@ -18,11 +18,11 @@ export default function OfflinePage() {
           </div>
 
           <h1 className="text-2xl font-bold text-[#003366] mb-3">
-            You&apo;sre Offline
+            You&apos;re Offline
           </h1>
 
           <p className="text-gray-600 mb-6">
-            It looks like you&apo;sve lost your internet connection. Please check
+            It looks like you&apos;ve lost your internet connection. Please check
             your connection and try again.
           </p>
 
