@@ -15,7 +15,7 @@
  *    - Name it: "Divine Notices Database"
  *    - Rename first sheet tab to: "Notices"
  *    - In Row 1, add these exact column headers:
- *      ID | Title | Content | Date | Category | Active
+ *      ID | Title | Link | Date | Category | Active
  * 
  * 2. GET SHEET ID:
  *    - Look at your browser URL
@@ -127,7 +127,7 @@ function getAllNotices() {
   const notices = data.slice(1).map(row => ({
     id: row[0],
     title: row[1],
-    content: row[2],
+    link: row[2],
     date: row[3],
     category: row[4],
     active: row[5]
@@ -148,7 +148,7 @@ function getNotice(id) {
       const notice = {
         id: data[i][0],
         title: data[i][1],
-        content: data[i][2],
+        link: data[i][2],
         date: data[i][3],
         category: data[i][4],
         active: data[i][5]
@@ -170,7 +170,7 @@ function createNotice(data) {
   sheet.appendRow([
     id,
     data.title,
-    data.content,
+    data.link,
     data.date || new Date().toISOString().split('T')[0],
     data.category,
     data.active !== undefined ? data.active : true
@@ -189,7 +189,7 @@ function updateNotice(data) {
   for (let i = 1; i < dataValues.length; i++) {
     if (dataValues[i][0] === data.id) {
       sheet.getRange(i + 1, 2).setValue(data.title);
-      sheet.getRange(i + 1, 3).setValue(data.content);
+      sheet.getRange(i + 1, 3).setValue(data.link);
       sheet.getRange(i + 1, 4).setValue(data.date);
       sheet.getRange(i + 1, 5).setValue(data.category);
       sheet.getRange(i + 1, 6).setValue(data.active);

@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Plus,
@@ -42,7 +41,7 @@ import { toast } from "sonner";
 interface Notice {
   id: string;
   title: string;
-  content: string;
+  link: string;
   date: string;
   category: string;
   active: boolean;
@@ -59,7 +58,7 @@ export default function NoticesDashboard() {
   const [deleteNoticeId, setDeleteNoticeId] = useState<string>("");
   const [formData, setFormData] = useState({
     title: "",
-    content: "",
+    link: "",
     date: new Date().toISOString().split("T")[0],
     category: "Academic",
     active: true,
@@ -99,7 +98,7 @@ export default function NoticesDashboard() {
       setEditingNotice(notice);
       setFormData({
         title: notice.title,
-        content: notice.content,
+        link: notice.link,
         date: notice.date,
         category: notice.category,
         active: notice.active,
@@ -108,7 +107,7 @@ export default function NoticesDashboard() {
       setEditingNotice(null);
       setFormData({
         title: "",
-        content: "",
+        link: "",
         date: new Date().toISOString().split("T")[0],
         category: "Academic",
         active: true,
@@ -122,7 +121,7 @@ export default function NoticesDashboard() {
     setEditingNotice(null);
     setFormData({
       title: "",
-      content: "",
+      link: "",
       date: new Date().toISOString().split("T")[0],
       category: "Academic",
       active: true,
@@ -357,16 +356,20 @@ export default function NoticesDashboard() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <Label htmlFor="content">Content</Label>
-                <Textarea
-                  id="content"
-                  value={formData.content}
+                <Label htmlFor="link">Download Link (Google Drive URL)</Label>
+                <Input
+                  id="link"
+                  type="url"
+                  placeholder="https://drive.google.com/file/d/.../view"
+                  value={formData.link}
                   onChange={(e) =>
-                    setFormData({ ...formData, content: e.target.value })
+                    setFormData({ ...formData, link: e.target.value })
                   }
-                  rows={5}
                   required
                 />
+                <p className="text-xs text-gray-500">
+                  Upload PDF to Google Drive, then paste the shareable link here
+                </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
