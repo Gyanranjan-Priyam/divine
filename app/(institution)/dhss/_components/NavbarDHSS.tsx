@@ -72,7 +72,7 @@ const navItems: NavItem[] = [
       { name: "Hostel", href: "/facilities/hostel" },
     ],
   },
-  { name: "Pay Online", href: "/pay-online" },
+  { name: "Pay Online", href: "/fees" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -125,7 +125,7 @@ const NavbarDHSS: React.FC = () => {
                 })}
               </div>
               <Button size="sm" className="text-xs">
-                <Link href={`${baseUrl}/pay-online`} className="hover:text-[#D4A853] transition-colors">
+                <Link href={`${baseUrl}/fees`} className="hover:text-[#D4A853] transition-colors">
                   Pay Online
                 </Link>
               </Button>
@@ -163,7 +163,7 @@ const NavbarDHSS: React.FC = () => {
                 })}
               </div>
               <Button size="sm" className="text-[9px] h-5 px-2 py-0">
-                <Link href={`${baseUrl}/pay-online`}>Pay</Link>
+                <Link href={`${baseUrl}/fees`}>Pay</Link>
               </Button>
             </div>
           </div>

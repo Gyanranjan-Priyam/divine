@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/pay-online`,
+      url: `${baseUrl}/fees`,
       lastModified: currentDate,
       changeFrequency: "yearly",
       priority: 0.7,

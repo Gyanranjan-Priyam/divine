@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pay Online | Divine Group of Institutions",
     description: "Secure online fee payment portal for students.",
-    url: "https://divinengrh.com/pay-online",
+    url: "https://divinengrh.com/fees",
   },
   alternates: {
-    canonical: "https://divinengrh.com/pay-online",
+    canonical: "https://divinengrh.com/fees",
   },
 };
 
@@ -98,7 +98,7 @@ export default function PayOnlinePage() {
                 size="lg"
                 className="w-full max-w-xs text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
               >
-                <Link href="/pay-online/ddc" className="gap-2">
+                <Link href="/fees/ddc" className="gap-2">
                   Pay College Fees
                   <svg
                     className="w-4 h-4"
@@ -156,7 +156,7 @@ export default function PayOnlinePage() {
                 size="lg"
                 className="w-full max-w-xs text-white shadow-lg hover:shadow-xl font-semibold"
               >
-                <Link href="/pay-online/dhss" className="gap-2">
+                <Link href="/fees/dhss" className="gap-2">
                   Pay School Fees
                   <svg
                     className="w-4 h-4"
