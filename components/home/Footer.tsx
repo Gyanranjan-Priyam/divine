@@ -18,16 +18,14 @@ const quickLinks = [
   { name: "Admissions", href: "/admissions/process" },
   { name: "Academic Programs", href: "/academic/courses" },
   { name: "Facilities", href: "/facilities/library" },
-  { name: "Placements", href: "/placement" },
   { name: "Contact Us", href: "/contact" },
 ];
 
 const importantLinks = [
-  { name: "Student Portal", href: "/student/portal" },
-  { name: "Online Fee Payment", href: "/fees/payment" },
+  { name: "Online Fee Payment", href: "/fees" },
   { name: "Examination Results", href: "/academic/results" },
-  { name: "Academic Calendar", href: "/academic/calendar" },
-  { name: "Career Opportunities", href: "/careers" },
+  { name: "Examination", href: "/academic/examination" },
+  { name: "Career Opportunities", href: "/academic/careers" },
 ];
 
 const resourceLinks = [
