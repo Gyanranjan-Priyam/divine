@@ -5,8 +5,12 @@ import {
   Users,
   ArrowRight,
   Quote,
+  GraduationCap,
+  Award,
+  BookOpen,
+  Clock,
+  Target,
 } from "lucide-react";
-import { achievementDhssData } from "./_data/achievementDhssData";
 
 export const metadata: Metadata = {
   title: "Divine Higher Secondary School | Best +2 Science School in Nayagarh",
@@ -14,14 +18,6 @@ export const metadata: Metadata = {
     "Welcome to Divine Higher Secondary School (DHSS), Nayagarh - Premier +2 Science education with Physics, Chemistry, Mathematics & Biology. Affiliated to CHSE, Odisha. SAMS Code: 24075102. Admissions Open 2026-27.",
 };
 
-// const scienceSubjects = [
-//   { name: "Physics", desc: "Comprehensive study of mechanics, optics, thermodynamics, and modern physics" },
-//   { name: "Chemistry", desc: "Organic, inorganic, and physical chemistry with practical applications" },
-//   { name: "Mathematics", desc: "Advanced calculus, algebra, trigonometry, and coordinate geometry" },
-//   { name: "Biology", desc: "Botany and Zoology covering life sciences and human anatomy" },
-//   { name: "Computer Science", desc: "Programming fundamentals, data structures, and computer applications" },
-//   { name: "English", desc: "Language proficiency, literature, and communication skills" },
-// ];
 
 const facilities = [
   {
@@ -50,26 +46,6 @@ const facilities = [
   },
 ];
 
-const newsItems = [
-  {
-    date: "Mar 10, 2026",
-    title: "Annual Science Exhibition 2026",
-    desc: "Students showcased innovative projects at the annual science exhibition, with participation from over 100 students across streams.",
-    tag: "Event",
-  },
-  {
-    date: "Mar 5, 2026",
-    title: "CHSE Board Exam Preparation",
-    desc: "Special coaching classes and doubt-clearing sessions organized for all +2 students appearing for CHSE board examinations.",
-    tag: "Academic",
-  },
-  {
-    date: "Feb 28, 2026",
-    title: "Inter-School Quiz Competition",
-    desc: "DHSS students won first position in the district-level inter-school quiz competition organized by Education Department.",
-    tag: "Achievement",
-  },
-];
 
 const affiliations = [
   { name: "CHSE, Odisha", logo: "/affiliation/chse.png" },
@@ -182,14 +158,6 @@ export default function DHSSPage() {
                   competitions that help them develop critical thinking and leadership skills.
                 </p>
               </div>
-              <div className="mt-8">
-                <Link
-                  href="/dhss/about"
-                  className="inline-flex items-center gap-2 text-[#003366] font-semibold hover:text-[#D4A853] transition-colors"
-                >
-                  Learn More About DHSS <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -286,36 +254,77 @@ export default function DHSSPage() {
       </section>
 
 
-      {/* ===== STUDENT ACHIEVEMENTS ===== */}
-      <section className="bg-[#003366] py-14 overflow-hidden">
+      {/* ===== WHY CHOOSE DHSS ===== */}
+      <section className="bg-[#003366] py-14">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-2">
-              Our Pride
+              Why Choose Us
             </p>
             <h2 className="text-3xl lg:text-4xl font-bold text-white">
-              Student Achievements
+              What Sets Divine Higher Secondary School Apart
             </h2>
           </div>
 
-          {/* Student Marquee */}
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div className="flex gap-6 animate-marquee-slow">
-                {[...achievementDhssData, ...achievementDhssData].map((student, index) => (
-                  <div
-                    key={`${student.id}-${index}`}
-                    className="flex-shrink-0 w-48 bg-white/10 backdrop-blur-sm border border-white/20 p-4 text-center"
-                  >
-                    <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden bg-[#003366] border-2 border-[#D4A853] flex items-center justify-center">
-                      <Users className="w-8 h-8 text-[#D4A853] opacity-60" />
-                    </div>
-                    <h4 className="text-white font-semibold text-sm mb-1 truncate">{student.name}</h4>
-                    <p className="text-[#D4A853] text-xs font-medium mb-1">{student.achievement}</p>
-                    <p className="text-gray-400 text-xs">{student.year}</p>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <GraduationCap className="w-6 h-6 text-[#003366]" />
               </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Experienced Faculty</h3>
+              <p className="text-gray-300 text-sm">
+                Highly qualified teachers with years of experience in guiding students to academic success.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Award className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Proven Results</h3>
+              <p className="text-gray-300 text-sm">
+                Consistent 100% pass rate with District Toppers year after year in CHSE examinations.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Modern Infrastructure</h3>
+              <p className="text-gray-300 text-sm">
+                Well-equipped laboratories, digital classrooms, and library facilities for effective learning.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Personal Attention</h3>
+              <p className="text-gray-300 text-sm">
+                Small class sizes ensuring individual attention and mentorship for every student.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Clock className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Regular Assessments</h3>
+              <p className="text-gray-300 text-sm">
+                Continuous evaluation through tests, assignments, and practice exams to track progress.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Competitive Exam Prep</h3>
+              <p className="text-gray-300 text-sm">
+                Dedicated coaching for NEET, JEE, and other competitive entrance examinations.
+              </p>
             </div>
           </div>
         </div>

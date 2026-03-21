@@ -6,8 +6,13 @@ import {
   Users,
   ArrowRight,
   Quote,
+  GraduationCap,
+  Award,
+  BookOpen,
+  Briefcase,
+  Library,
+  Target,
 } from "lucide-react";
-import { achievementDdcData } from "./_data/achievementDdcData";
 
 export const metadata: Metadata = {
   title: "Divine Degree College | Best B.Sc. College in Nayagarh, Odisha",
@@ -184,14 +189,6 @@ export default function DDCPage() {
                   opportunities.
                 </p>
               </div>
-              <div className="mt-8">
-                <Link
-                  href="/ddc/about"
-                  className="inline-flex items-center gap-2 text-[#003366] font-semibold hover:text-[#D4A853] transition-colors"
-                >
-                  Learn More About DDC <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -289,36 +286,77 @@ export default function DDCPage() {
 
 
 
-      {/* ===== STUDENT ACHIEVEMENTS ===== */}
-      <section className="bg-[#003366] py-14 overflow-hidden">
+      {/* ===== WHY CHOOSE DDC ===== */}
+      <section className="bg-[#003366] py-14">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <p className="text-[#D4A853] font-semibold text-sm tracking-widest uppercase mb-2">
-              Our Pride
+              Why Choose Us
             </p>
             <h2 className="text-3xl lg:text-4xl font-bold text-white">
-              Student Achievements
+              What Sets DDC Apart
             </h2>
           </div>
 
-          {/* Student Marquee */}
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div className="flex gap-6 animate-marquee-slow">
-                {[...achievementDdcData, ...achievementDdcData].map((student, index) => (
-                  <div
-                    key={`${student.id}-${index}`}
-                    className="flex-shrink-0 w-48 bg-white/10 backdrop-blur-sm border border-white/20 p-4 text-center"
-                  >
-                    <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden bg-[#003366] border-2 border-[#D4A853] flex items-center justify-center">
-                      <Users className="w-8 h-8 text-[#D4A853] opacity-60" />
-                    </div>
-                    <h4 className="text-white font-semibold text-sm mb-1 truncate">{student.name}</h4>
-                    <p className="text-[#D4A853] text-xs font-medium mb-1">{student.achievement}</p>
-                    <p className="text-gray-400 text-xs">{student.year}</p>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <GraduationCap className="w-6 h-6 text-[#003366]" />
               </div>
+              <h3 className="text-white font-semibold text-lg mb-2">University Affiliation</h3>
+              <p className="text-gray-300 text-sm">
+                Affiliated to Utkal University, Bhubaneswar - one of the oldest and most prestigious universities in Odisha.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Award className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Experienced Faculty</h3>
+              <p className="text-gray-300 text-sm">
+                Highly qualified professors with expertise in their respective subjects and commitment to student success.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Modern Infrastructure</h3>
+              <p className="text-gray-300 text-sm">
+                Well-equipped science laboratories, spacious classrooms, and digital learning facilities.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Library className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Extensive Library</h3>
+              <p className="text-gray-300 text-sm">
+                Rich collection of textbooks, reference materials, journals, and digital resources for research.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Briefcase className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Career Guidance</h3>
+              <p className="text-gray-300 text-sm">
+                Dedicated placement cell and career counseling to help students achieve their professional goals.
+              </p>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 p-6">
+              <div className="w-12 h-12 bg-[#D4A853] flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-[#003366]" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Competitive Exam Prep</h3>
+              <p className="text-gray-300 text-sm">
+                Coaching and guidance for competitive exams including state and central government services.
+              </p>
             </div>
           </div>
         </div>

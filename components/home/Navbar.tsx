@@ -70,6 +70,7 @@ const navItems: NavItem[] = [
       { name: "Hostel", href: "/facilities/hostel" },
     ],
   },
+  { name: "Notice Board", href: "/notices" },
   { name: "Pay Online", href: "/fees" },
   { name: "Contact", href: "/contact" },
 ];
