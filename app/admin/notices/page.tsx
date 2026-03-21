@@ -25,15 +25,12 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Plus,
   Edit,
   Trash2,
   LogOut,
   Newspaper,
-  AlertCircle,
-  CheckCircle2,
   Loader2,
 } from "lucide-react";
 import { toast } from "sonner";
